@@ -2,7 +2,7 @@
 {
     public interface IConcreteNetworkClient
     {
-        void Send(string type, string data);
+        void Send(string type, string function, string data);
 
         string Receive();
     }

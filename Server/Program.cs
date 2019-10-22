@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using TcpServer;
 
 namespace TcpIp_Extended
 {
@@ -35,21 +37,31 @@ namespace TcpIp_Extended
 
                     int bytesRead;
 
-                    while ((bytesRead = stream.Read(bytes, 0, bytes.Length)) != 0)
+                    try
                     {
-                        data = System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRead);
-                        Console.WriteLine("Received: {0}", data);
+                        while ((bytesRead = stream.Read(bytes, 0, bytes.Length)) != 0)
+                        {
+                            data = System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRead);
+                            Console.WriteLine("Received: {0}", data);
 
-                        data = data.ToUpper();
+                            Request request = new Request(data);
+                            data = new Respone(request).getResult();
 
-                        byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
+                            byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
 
-                        stream.Write(msg, 0, msg.Length);
-                        Console.WriteLine("Sent: {0}", data);
+                            stream.Write(msg, 0, msg.Length);
+                            Console.WriteLine("Sent: {0}", data);
+                        }
                     }
-
-                    client.Close();
-                    Console.WriteLine("Disconnected!");
+                    catch (IOException)
+                    {
+                        continue;
+                    }
+                    finally
+                    {
+                        client.Close();
+                        Console.WriteLine("Disconnected!");
+                    }
                 }
             }
             catch (SocketException e)

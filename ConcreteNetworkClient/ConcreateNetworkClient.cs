@@ -17,9 +17,9 @@ namespace TcpIp_Extended
             networkStream = tcpClient.GetStream();
         }
 
-        public void Send(string type, string message)
+        public void Send(string type, string function, string message)
         {
-            byte[] data = System.Text.Encoding.ASCII.GetBytes($"{type};{message}");
+            byte[] data = System.Text.Encoding.ASCII.GetBytes($"{type};{function};{message}");
 
             networkStream.Write(data, 0, data.Length);
         }

@@ -13,7 +13,7 @@ namespace TcpIp_Extended
 
         public bool IsExisting(Employee employee)
         {
-            concreteNetworkClient.Send(nameof(Employee), employee.ToString());
+            concreteNetworkClient.Send(nameof(Employee), nameof(IsExisting), employee.ToString());
 
             string response = concreteNetworkClient.Receive();
 
