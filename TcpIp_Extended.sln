@@ -5,15 +5,19 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpServer", "Server\TcpServer.csproj", "{7DE2FD84-500B-4097-BEAB-15D256717BBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkClient", "NetworkClient\NetworkClient.csproj", "{0A7DFF47-EDC1-4C3D-8DAE-20E8557A46C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkClient", "NetworkClient\NetworkClient.csproj", "{0A7DFF47-EDC1-4C3D-8DAE-20E8557A46C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkController", "NetworkController\NetworkController.csproj", "{6821AD0F-DCE3-482F-BCA5-71846CCA4792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{A8C4886D-74E3-4539-B108-9B16E0A5D828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{A8C4886D-74E3-4539-B108-9B16E0A5D828}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "DataTypes\DataTypes.csproj", "{1945A5C4-3D50-4E35-BDF5-B8D8C22A60C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTypes", "DataTypes\DataTypes.csproj", "{1945A5C4-3D50-4E35-BDF5-B8D8C22A60C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcreteNetworkClient", "ConcreteNetworkClient\ConcreteNetworkClient.csproj", "{075ADDDE-FD8D-4C5A-8C07-B9116C361D3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{77D53813-3E22-4EFE-98F1-35D7BE6A3760}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{CC8782AF-6326-440B-B7EF-4508A3DCC799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DE2FD84-500B-4097-BEAB-15D256717BBD} = {CC8782AF-6326-440B-B7EF-4508A3DCC799}
+		{0A7DFF47-EDC1-4C3D-8DAE-20E8557A46C5} = {77D53813-3E22-4EFE-98F1-35D7BE6A3760}
+		{6821AD0F-DCE3-482F-BCA5-71846CCA4792} = {77D53813-3E22-4EFE-98F1-35D7BE6A3760}
+		{A8C4886D-74E3-4539-B108-9B16E0A5D828} = {77D53813-3E22-4EFE-98F1-35D7BE6A3760}
+		{075ADDDE-FD8D-4C5A-8C07-B9116C361D3D} = {77D53813-3E22-4EFE-98F1-35D7BE6A3760}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D53D8374-0ED3-4B12-8C1F-EAB1E74CB65C}
