@@ -11,5 +11,10 @@ namespace NetworkServerController
         {
             this.networkClient = networkClient;
         }
+
+        public void Dispatch()
+        {
+
+        }
     }
 }

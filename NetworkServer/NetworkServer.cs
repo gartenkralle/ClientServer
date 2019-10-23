@@ -2,7 +2,7 @@
 using DataTypes;
 using TcpIp_Extended;
 
-namespace NetworkServer
+namespace TcpIp_Server
 {
     public class NetworkServer : INetworkServer
     {
