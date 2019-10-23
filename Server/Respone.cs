@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataTypes;
+using System;
 using TcpServer;
 
 namespace TcpIp_Extended
@@ -9,6 +10,7 @@ namespace TcpIp_Extended
 
         internal Respone(Request request)
         {
+            if(request.Type == nameof(Employee))
             this.request = request;
         }
 

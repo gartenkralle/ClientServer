@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetworkController\NetworkController.csproj" />
+    <ProjectReference Include="..\NetworkController\NetworkClientController.csproj" />
   </ItemGroup>
 
 </Project>

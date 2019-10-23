@@ -3,21 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpServer", "Server\TcpServer.csproj", "{7DE2FD84-500B-4097-BEAB-15D256717BBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerConsoleApp", "Server\ServerConsoleApp.csproj", "{7DE2FD84-500B-4097-BEAB-15D256717BBD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkClient", "NetworkClient\NetworkClient.csproj", "{0A7DFF47-EDC1-4C3D-8DAE-20E8557A46C5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkController", "NetworkController\NetworkController.csproj", "{6821AD0F-DCE3-482F-BCA5-71846CCA4792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkClientController", "NetworkController\NetworkClientController.csproj", "{6821AD0F-DCE3-482F-BCA5-71846CCA4792}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{A8C4886D-74E3-4539-B108-9B16E0A5D828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientConsoleApp", "ConsoleApp\ClientConsoleApp.csproj", "{A8C4886D-74E3-4539-B108-9B16E0A5D828}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTypes", "DataTypes\DataTypes.csproj", "{1945A5C4-3D50-4E35-BDF5-B8D8C22A60C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "DataTypes\Model.csproj", "{1945A5C4-3D50-4E35-BDF5-B8D8C22A60C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcreteNetworkClient", "ConcreteNetworkClient\ConcreteNetworkClient.csproj", "{075ADDDE-FD8D-4C5A-8C07-B9116C361D3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{77D53813-3E22-4EFE-98F1-35D7BE6A3760}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{CC8782AF-6326-440B-B7EF-4508A3DCC799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkServerController", "NetworkServerController\NetworkServerController.csproj", "{8D89B2EF-99C7-449D-A310-84CB59908692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkServer", "NetworkServer\NetworkServer.csproj", "{2C0B11F1-5A31-4E63-BD66-FCD8756F5E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcreteNetworkServer", "ConcreteNetworkServer\ConcreteNetworkServer.csproj", "{65AC2669-BFD8-4DE0-945F-4920488CF5DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +55,18 @@ Global
 		{075ADDDE-FD8D-4C5A-8C07-B9116C361D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{075ADDDE-FD8D-4C5A-8C07-B9116C361D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{075ADDDE-FD8D-4C5A-8C07-B9116C361D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D89B2EF-99C7-449D-A310-84CB59908692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D89B2EF-99C7-449D-A310-84CB59908692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D89B2EF-99C7-449D-A310-84CB59908692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D89B2EF-99C7-449D-A310-84CB59908692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0B11F1-5A31-4E63-BD66-FCD8756F5E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0B11F1-5A31-4E63-BD66-FCD8756F5E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0B11F1-5A31-4E63-BD66-FCD8756F5E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0B11F1-5A31-4E63-BD66-FCD8756F5E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65AC2669-BFD8-4DE0-945F-4920488CF5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65AC2669-BFD8-4DE0-945F-4920488CF5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65AC2669-BFD8-4DE0-945F-4920488CF5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65AC2669-BFD8-4DE0-945F-4920488CF5DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +77,9 @@ Global
 		{6821AD0F-DCE3-482F-BCA5-71846CCA4792} = {77D53813-3E22-4EFE-98F1-35D7BE6A3760}
 		{A8C4886D-74E3-4539-B108-9B16E0A5D828} = {77D53813-3E22-4EFE-98F1-35D7BE6A3760}
 		{075ADDDE-FD8D-4C5A-8C07-B9116C361D3D} = {77D53813-3E22-4EFE-98F1-35D7BE6A3760}
+		{8D89B2EF-99C7-449D-A310-84CB59908692} = {CC8782AF-6326-440B-B7EF-4508A3DCC799}
+		{2C0B11F1-5A31-4E63-BD66-FCD8756F5E63} = {CC8782AF-6326-440B-B7EF-4508A3DCC799}
+		{65AC2669-BFD8-4DE0-945F-4920488CF5DA} = {CC8782AF-6326-440B-B7EF-4508A3DCC799}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D53D8374-0ED3-4B12-8C1F-EAB1E74CB65C}

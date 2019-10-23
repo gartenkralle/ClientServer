@@ -8,7 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ConcreteNetworkClient\ConcreteNetworkClient.csproj" />
     <ProjectReference Include="..\NetworkClient\NetworkClient.csproj" />
-    <ProjectReference Include="..\NetworkController\NetworkController.csproj" />
+    <ProjectReference Include="..\NetworkController\NetworkClientController.csproj" />
   </ItemGroup>
 
 </Project>
