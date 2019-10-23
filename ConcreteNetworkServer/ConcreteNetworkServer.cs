@@ -1,10 +1,9 @@
 ﻿using System;
-using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using TcpIp_Extended;
 
-namespace ConcreteNetworkServer
+namespace TcpIp_Server
 {
     public class ConcreteNetworkServer : IConcreteNetworkServer
     {

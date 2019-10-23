@@ -7,7 +7,7 @@ namespace TcpIp_Extended
     {
         static void Main()
         {
-            NetworkController networkController = new NetworkController(new NetworkServer());
+            NetworkController networkController = new NetworkController(new NetworkServer(new ConcreteNetworkServer()));
         }
     }
 }

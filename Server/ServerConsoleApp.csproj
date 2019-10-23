@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConcreteNetworkServer\ConcreteNetworkServer.csproj" />
     <ProjectReference Include="..\DataTypes\Model.csproj" />
     <ProjectReference Include="..\NetworkServerController\NetworkServerController.csproj" />
     <ProjectReference Include="..\NetworkServer\NetworkServer.csproj" />
