@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NetworkServerController
 {
-    class EmployeeControllre
+    class EmployeeController
     {
     }
 }
