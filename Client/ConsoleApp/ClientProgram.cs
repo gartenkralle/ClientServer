@@ -1,23 +1,24 @@
-﻿using DataTypes;
+﻿using Client;
+using DataTypes;
 using System;
 using TcpIp_Extended;
 
 namespace ConsoleApp
 {
-    class Program
+    class ClientProgram
     {
         static void Main()
         {
-            NetworkClientController networkController = new NetworkClientController(new NetworkClient(new ConcreteNetworkClient()));
+            EmployeeClientController employeeClientController = new EmployeeClientController(new NetworkClient(new ConcreteNetworkClient()));
 
-            Console.WriteLine(networkController.IsExisting(new Employee
+            Console.WriteLine(employeeClientController.IsExisting(new Employee
             {
                 ID = 1,
                 Name = "Peter",
                 Salary = 30000
             }));
 
-            Console.WriteLine(networkController.IsExisting(new Employee
+            Console.WriteLine(employeeClientController.IsExisting(new Employee
             {
                 ID = 2,
                 Name = "Peter",

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.Sockets;
-using System.Threading;
 
 namespace TcpIp_Extended
 {
@@ -31,22 +30,19 @@ namespace TcpIp_Extended
 
             int bytesRead;
 
-            do
-            {
-                bytesRead = networkStream.Read(data, 0, data.Length);
-                Thread.Sleep(200);
-            }
-            while (bytesRead == 0);
+            bytesRead = networkStream.Read(data, 0, data.Length);
 
             return System.Text.Encoding.ASCII.GetString(data, 0, bytesRead);
         }
 
         protected virtual void Dispose(bool disposing)
         {
-            if(disposing)
+            if (disposing)
             {
                 networkStream.Close();
+                networkStream.Dispose();
                 tcpClient.Close();
+                tcpClient.Dispose();
             }
         }
 

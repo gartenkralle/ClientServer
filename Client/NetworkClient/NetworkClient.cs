@@ -11,13 +11,14 @@ namespace TcpIp_Extended
             this.concreteNetworkClient = concreteNetworkClient;
         }
 
-        public bool IsExisting(Employee employee)
+        public string Receive()
         {
-            concreteNetworkClient.Send(nameof(Employee), nameof(IsExisting), employee.ToString());
+            return concreteNetworkClient.Receive();
+        }
 
-            string response = concreteNetworkClient.Receive();
-
-            return bool.Parse(response);
+        public void Send(string type, string function, string data)
+        {
+            concreteNetworkClient.Send(type, function, data);
         }
     }
 }

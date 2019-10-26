@@ -12,14 +12,14 @@ namespace TcpIp_Server
             this.concreteNetworkServer = concreteNetworkServer;
         }
 
-        public void Send(string data)
-        {
-            concreteNetworkServer.Send(data);
-        }
-
         public string Receive()
         {
             return concreteNetworkServer.Receive();
+        }
+
+        public void Send(string data)
+        {
+            concreteNetworkServer.Send(data);
         }
     }
 }
