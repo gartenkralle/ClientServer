@@ -1,5 +1,4 @@
 ﻿using System;
-using DataTypes;
 using TcpIp_Extended;
 
 namespace TcpIp_Server
@@ -13,9 +12,14 @@ namespace TcpIp_Server
             this.concreteNetworkServer = concreteNetworkServer;
         }
 
-        public bool IsExisting(Employee employee)
+        public void Send(string data)
         {
-            throw new NotImplementedException();
+            concreteNetworkServer.Send(data);
+        }
+
+        public string Receive()
+        {
+            return concreteNetworkServer.Receive();
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TcpServer
+﻿namespace TcpServer
 {
     internal class Request
     {

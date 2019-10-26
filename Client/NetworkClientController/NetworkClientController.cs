@@ -2,11 +2,11 @@
 
 namespace TcpIp_Extended
 {
-    public class NetworkController
+    public class NetworkClientController
     {
         private readonly INetworkClient networkClient;
 
-        public NetworkController(INetworkClient networkClient)
+        public NetworkClientController(INetworkClient networkClient)
         {
             this.networkClient = networkClient;
         }

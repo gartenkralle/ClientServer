@@ -8,11 +8,18 @@ namespace ConsoleApp
     {
         static void Main()
         {
-            NetworkController networkController = new NetworkController(new NetworkClient(new ConcreteNetworkClient()));
+            NetworkClientController networkController = new NetworkClientController(new NetworkClient(new ConcreteNetworkClient()));
 
             Console.WriteLine(networkController.IsExisting(new Employee
             {
                 ID = 1,
+                Name = "Peter",
+                Salary = 30000
+            }));
+
+            Console.WriteLine(networkController.IsExisting(new Employee
+            {
+                ID = 2,
                 Name = "Peter",
                 Salary = 30000
             }));
