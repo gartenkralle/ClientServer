@@ -1,5 +1,4 @@
-﻿using System;
-using TcpIp_Extended;
+﻿using TcpIp_Extended;
 
 namespace Server
 {

@@ -1,8 +1,9 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using AbstractDataTypes;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DataTypes
 {
-    public class Employee : IEmployee
+    public class Employee : IDataEntity
     {
         public Employee()
         {
@@ -24,7 +25,7 @@ namespace DataTypes
 
         public int Salary { get; set; }
 
-        public bool Equals([AllowNull] IEmployee other)
+        public bool Equals([AllowNull] IDataEntity other)
         {
             Employee employee = other as Employee;
 
