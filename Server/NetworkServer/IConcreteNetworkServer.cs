@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TcpIp_Extended
+﻿namespace TcpIp_Extended
 {
     public interface IConcreteNetworkServer
     {
