@@ -1,9 +1,8 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 
 namespace DataTypes
 {
-    public class Employee : IEquatable<Employee>
+    public class Employee : IEmployee
     {
         public Employee()
         {
@@ -25,11 +24,13 @@ namespace DataTypes
 
         public int Salary { get; set; }
 
-        public bool Equals([AllowNull] Employee other)
+        public bool Equals([AllowNull] IEmployee other)
         {
-            return ID == other.ID &&
-                Name == other.Name &&
-                Salary == other.Salary;
+            Employee employee = other as Employee;
+
+            return ID == employee.ID &&
+                Name == employee.Name &&
+                Salary == employee.Salary;
         }
 
         public override string ToString()

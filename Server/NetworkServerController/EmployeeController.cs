@@ -5,13 +5,13 @@ namespace Server
 {
     public class EmployeeController
     {
-        private readonly List<Employee> employees;
+        private readonly ICollection<IEmployee> employees;
         
         public EmployeeController()
         {
-            employees = new List<Employee>();
+            employees = new List<IEmployee>();
 
-            Employee employee = new Employee
+            IEmployee employee = new Employee
             {
                 ID = 2,
                 Name = "Peter",
@@ -21,7 +21,7 @@ namespace Server
             employees.Add(employee);
         }
 
-        public bool IsExisting(Employee employee)
+        public bool IsExisting(IEmployee employee)
         {
             return employees.Contains(employee);
         }

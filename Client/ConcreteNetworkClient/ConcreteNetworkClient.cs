@@ -12,11 +12,11 @@ namespace TcpIp_Extended
         private TcpClient tcpClient;
         private NetworkStream networkStream;
 
-        public void Send(string type, string function, string message)
+        public void Send(string message)
         {
             Connect();
 
-            byte[] data = Encoding.ASCII.GetBytes($"{type};{function};{message}");
+            byte[] data = Encoding.ASCII.GetBytes(message);
 
             networkStream.Write(data, 0, data.Length);
         }

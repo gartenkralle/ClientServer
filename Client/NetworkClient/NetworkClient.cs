@@ -18,7 +18,7 @@ namespace TcpIp_Extended
 
         public void Send(string type, string function, string data)
         {
-            concreteNetworkClient.Send(type, function, data);
+            concreteNetworkClient.Send($"{type};{function};{data}");
         }
     }
 }

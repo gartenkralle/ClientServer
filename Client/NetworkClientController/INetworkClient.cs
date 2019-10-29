@@ -1,6 +1,4 @@
-﻿using DataTypes;
-
-namespace TcpIp_Extended
+﻿namespace TcpIp_Extended
 {
     public interface INetworkClient
     {

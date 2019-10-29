@@ -4,7 +4,7 @@ namespace TcpIp_Extended
 {
     public interface IConcreteNetworkClient : IDisposable
     {
-        void Send(string type, string function, string data);
+        void Send(string message);
         string Receive();
     }
 }
