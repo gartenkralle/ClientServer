@@ -3,7 +3,6 @@
     public interface IConcreteNetworkServer
     {
         string Receive();
-
-        void Send(string data);        
+        void Send(string data);
     }
 }

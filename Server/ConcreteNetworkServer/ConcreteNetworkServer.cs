@@ -18,8 +18,6 @@ namespace TcpIp_Server
         private TcpClient tcpClient;
         private NetworkStream networkStream;
 
-        public bool IsClientConnected => tcpClient.Connected;
-
         public ConcreteNetworkServer()
         {
             IPAddress localAddr = IPAddress.Parse(serverIp);
@@ -28,16 +26,11 @@ namespace TcpIp_Server
             tcpListener.Start();
 
             bytes = new byte[256];
-
-            Open();
         }
 
         public string Receive()
         {
-            while(!networkStream.DataAvailable)
-            {
-                Thread.Sleep(200);
-            }
+            Connect();
 
             data = null;
 
@@ -57,6 +50,8 @@ namespace TcpIp_Server
 
             networkStream.Write(msg, 0, msg.Length);
             Console.WriteLine("Sent: {0}", data);
+
+            Disconnect();
         }
 
         public void Dispose()
@@ -69,11 +64,13 @@ namespace TcpIp_Server
         {
             if(disposing)
             {
-                Close();
+                tcpClient.Close();
+                tcpListener.Stop();
+                networkStream.Dispose();
             }
         }
 
-        private void Open()
+        private void Connect()
         {
             Console.WriteLine("Waiting for a connection... ");
 
@@ -84,7 +81,7 @@ namespace TcpIp_Server
             networkStream = tcpClient.GetStream();
         }
 
-        private void Close()
+        private void Disconnect()
         {
             tcpClient.Close();
             networkStream.Dispose();

@@ -1,4 +1,5 @@
-﻿using DataTypes;
+﻿using System;
+using DataTypes;
 using TcpIp_Extended;
 
 namespace Client
