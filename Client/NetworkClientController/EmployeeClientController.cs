@@ -14,7 +14,7 @@ namespace Client
 
         public bool IsExisting(IDataEntity employee)
         {
-            networkClient.Send(nameof(employee), nameof(IsExisting), employee.ToString());
+            networkClient.Send("Employee", "IsExisting", employee.ToString());
 
             string response = networkClient.Receive();
 

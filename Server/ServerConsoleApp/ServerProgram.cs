@@ -26,7 +26,7 @@ namespace Server
 
             Request requestEntity = new Request(request);
 
-            if (requestEntity.Type == "employee")
+            if (requestEntity.Type == "Employee")
             {
                 EmployeeServerController employeeController = new EmployeeServerController();
 
