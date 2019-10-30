@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
-using System.Threading;
 using TcpIp_Extended;
 
 namespace TcpIp_Server
 {
-    public class ConcreteNetworkServer : IConcreteNetworkServer, IDisposable
+    public class SocketNetworkServer : IConcreteNetworkServer, IDisposable
     {
         private readonly int port = 13000;
         private readonly string serverIp = "127.0.0.1";
@@ -18,7 +17,7 @@ namespace TcpIp_Server
         private TcpClient tcpClient;
         private NetworkStream networkStream;
 
-        public ConcreteNetworkServer()
+        public SocketNetworkServer()
         {
             IPAddress localAddr = IPAddress.Parse(serverIp);
 

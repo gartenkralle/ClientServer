@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TcpIp_Extended
 {
-    public class ConcreteNetworkClient : IConcreteNetworkClient, IDisposable
+    public class SocketNetworkClient : IConcreteNetworkClient, IDisposable
     {
         private readonly string serverIp = "127.0.0.1";
         private readonly int port = 13000;

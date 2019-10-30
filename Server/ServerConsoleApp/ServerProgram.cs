@@ -8,7 +8,7 @@ namespace Server
     {
         static void Main()
         {
-            NetworkServerController networkServerController = new NetworkServerController(new NetworkServer(new ConcreteNetworkServer()));
+            NetworkServerController networkServerController = new NetworkServerController(new NetworkServer(new SocketNetworkServer()));
 
             while (true)
             {
