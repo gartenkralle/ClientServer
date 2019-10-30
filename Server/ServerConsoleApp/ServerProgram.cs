@@ -14,29 +14,10 @@ namespace Server
             {
                 string request = networkServerController.Receive();
 
-                string response = Dispatch(request);
+                string response = networkServerController.Dispatch(request);
 
                 networkServerController.Send(response);
             }
-        }
-
-        static string Dispatch(string request)
-        {
-            string response = null;
-
-            Request requestEntity = new Request(request);
-
-            if (requestEntity.Type == "Employee")
-            {
-                EmployeeServerController employeeController = new EmployeeServerController();
-
-                if (requestEntity.Function == "IsExisting")
-                {
-                    response = employeeController.IsExisting(new Employee(requestEntity.Data)).ToString();
-                }
-            }
-
-            return response;
         }
     }
 }
