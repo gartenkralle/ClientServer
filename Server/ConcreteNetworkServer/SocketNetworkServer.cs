@@ -5,7 +5,7 @@ using TcpIp_Extended;
 
 namespace TcpIp_Server
 {
-    public class SocketNetworkServer : IConcreteNetworkServer, IDisposable
+    public class SocketNetworkServer : INetworkServer, IDisposable
     {
         private readonly int port = 13000;
         private readonly string serverIp = "127.0.0.1";

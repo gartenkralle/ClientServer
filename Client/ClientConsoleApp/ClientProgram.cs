@@ -9,7 +9,7 @@ namespace ConsoleApp
     {
         static void Main()
         {
-            EmployeeClientController employeeClientController = new EmployeeClientController(new NetworkClient(new SocketNetworkClient()));
+            EmployeeClientController employeeClientController = new EmployeeClientController(new SocketNetworkClient());
 
             Console.WriteLine(employeeClientController.IsExisting(new Employee
             {

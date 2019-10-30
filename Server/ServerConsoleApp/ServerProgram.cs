@@ -1,6 +1,4 @@
-﻿using DataTypes;
-using TcpIp_Server;
-using TcpServer;
+﻿using TcpIp_Server;
 
 namespace Server
 {
@@ -8,13 +6,13 @@ namespace Server
     {
         static void Main()
         {
-            NetworkServerController networkServerController = new NetworkServerController(new NetworkServer(new SocketNetworkServer()));
+            NetworkServerController networkServerController = new NetworkServerController(new SocketNetworkServer());
 
             while (true)
             {
                 string request = networkServerController.Receive();
 
-                string response = networkServerController.Dispatch(request);
+                string response = NetworkServerController.Dispatch(request);
 
                 networkServerController.Send(response);
             }

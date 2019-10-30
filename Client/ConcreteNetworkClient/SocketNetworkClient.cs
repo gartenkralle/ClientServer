@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TcpIp_Extended
 {
-    public class SocketNetworkClient : IConcreteNetworkClient, IDisposable
+    public class SocketNetworkClient : INetworkClient, IDisposable
     {
         private readonly string serverIp = "127.0.0.1";
         private readonly int port = 13000;
@@ -12,13 +12,13 @@ namespace TcpIp_Extended
         private TcpClient tcpClient;
         private NetworkStream networkStream;
 
-        public void Send(string message)
+        public void Send(string type, string function, string data)
         {
             Connect();
 
-            byte[] data = Encoding.ASCII.GetBytes(message);
+            byte[] message = Encoding.ASCII.GetBytes($"{type};{function};{data}");
 
-            networkStream.Write(data, 0, data.Length);
+            networkStream.Write(message, 0, message.Length);
         }
 
         public string Receive()

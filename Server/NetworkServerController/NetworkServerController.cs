@@ -1,5 +1,4 @@
 ﻿using DataTypes;
-using System;
 using TcpIp_Extended;
 using TcpServer;
 
@@ -24,7 +23,7 @@ namespace Server
             networkServer.Send(data);
         }
 
-        public string Dispatch(string request)
+        public static string Dispatch(string request)
         {
             string response = null;
 
