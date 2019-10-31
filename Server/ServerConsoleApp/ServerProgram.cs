@@ -1,4 +1,5 @@
-﻿using TcpIp_Server;
+﻿using Dispatchment;
+using TcpIp_Server;
 
 namespace Server
 {
@@ -12,7 +13,7 @@ namespace Server
             {
                 string request = networkServerController.Receive();
 
-                string response = NetworkServerController.Dispatch(request);
+                string response = Dispatcher.Dispatch(request);
 
                 networkServerController.Send(response);
             }
