@@ -1,5 +1,5 @@
-﻿using AbstractDataTypes;
-using DataTypes;
+﻿using DataTypes;
+using Dispatchment;
 using Server;
 using System.Collections.Generic;
 
@@ -7,13 +7,13 @@ namespace ServerModel
 {
     public class EmployeeServerModel : IEmployeeServerModel
     {
-        private readonly ICollection<IDataEntity> employees;
+        private readonly ICollection<IEmployee> employees;
 
         public EmployeeServerModel()
         {
-            employees = new List<IDataEntity>();
+            employees = new List<IEmployee>();
 
-            IDataEntity employee = new Employee
+            IEmployee employee = new Employee
             {
                 ID = 2,
                 Name = "Peter",
@@ -23,7 +23,7 @@ namespace ServerModel
             employees.Add(employee);
         }
 
-        public bool Contains(IDataEntity employee)
+        public bool Contains(IEmployee employee)
         {
             return employees.Contains(employee);
         }

@@ -1,13 +1,19 @@
-﻿using DataTypes;
-using Server;
-using ServerModel;
-using TcpServer;
+﻿using TcpServer;
 
 namespace Dispatchment
 {
-    public static class Dispatcher
+    public class Dispatcher
     {
-        public static string Dispatch(string request)
+        private readonly IServerControllerFactory serverControllerFactory;
+        private readonly IDataEntityFactory dataEntityFactory;
+
+        public Dispatcher(IServerControllerFactory serverControllerFactory, IDataEntityFactory dataEntityFactory)
+        {
+            this.serverControllerFactory = serverControllerFactory;
+            this.dataEntityFactory = dataEntityFactory;
+        }
+
+        public string Dispatch(string request)
         {
             string response = null;
 
@@ -15,11 +21,11 @@ namespace Dispatchment
 
             if (requestEntity.Type == "Employee")
             {
-                EmployeeServerController employeeController = new EmployeeServerController(new EmployeeServerModel());
+                IEmployeeServerController employeeServerController = serverControllerFactory.CreateEmployeeServerController();
 
                 if (requestEntity.Function == "IsExisting")
                 {
-                    response = employeeController.IsExisting(new Employee(requestEntity.Data)).ToString();
+                    response = employeeServerController.IsExisting(dataEntityFactory.CreateEmployee(requestEntity.Data)).ToString();
                 }
             }
 

@@ -1,8 +1,8 @@
-﻿using AbstractDataTypes;
+﻿using Dispatchment;
 
 namespace Server
 {
-    public class EmployeeServerController
+    public class EmployeeServerController : IEmployeeServerController
     {
         private readonly IEmployeeServerModel employeeModel;
 
@@ -11,7 +11,7 @@ namespace Server
             this.employeeModel = employeeModel;
         }
 
-        public bool IsExisting(IDataEntity employee)
+        public bool IsExisting(IEmployee employee)
         {
             return employeeModel.Contains(employee);
         }

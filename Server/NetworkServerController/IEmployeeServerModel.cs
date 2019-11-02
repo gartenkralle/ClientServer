@@ -1,9 +1,9 @@
-﻿using AbstractDataTypes;
+﻿using Dispatchment;
 
 namespace Server
 {
     public interface IEmployeeServerModel
     {
-        bool Contains(IDataEntity employee);
+        bool Contains(IEmployee employee);
     }
 }

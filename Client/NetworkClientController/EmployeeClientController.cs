@@ -1,4 +1,4 @@
-﻿using AbstractDataTypes;
+﻿using Dispatchment;
 using TcpIp_Extended;
 
 namespace Client
@@ -12,7 +12,7 @@ namespace Client
             this.networkClient = networkClient;
         }
 
-        public bool IsExisting(IDataEntity employee)
+        public bool IsExisting(IEmployee employee)
         {
             networkClient.Send("Employee", "IsExisting", employee.ToString());
 
