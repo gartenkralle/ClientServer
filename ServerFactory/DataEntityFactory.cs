@@ -1,7 +1,8 @@
-﻿using DataTypes;
-using Dispatchment;
+﻿using ServerDispatchment;
+using SharedAbstractModel;
+using SharedModel;
 
-namespace Server
+namespace ServerFactory
 {
     public class DataEntityFactory : IDataEntityFactory
     {

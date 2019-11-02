@@ -1,6 +1,6 @@
-﻿using TcpServer;
+﻿using ServerController;
 
-namespace Dispatchment
+namespace ServerDispatchment
 {
     internal static class Type
     {

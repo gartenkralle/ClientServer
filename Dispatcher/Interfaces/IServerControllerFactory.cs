@@ -1,6 +1,6 @@
-﻿using Server;
+﻿using ServerController;
 
-namespace Dispatchment
+namespace ServerDispatchment
 {
     public interface IServerControllerFactory
     {

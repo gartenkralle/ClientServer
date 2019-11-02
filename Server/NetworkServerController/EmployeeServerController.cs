@@ -1,6 +1,6 @@
-﻿using Dispatchment;
+﻿using SharedAbstractModel;
 
-namespace Server
+namespace ServerController
 {
     public class EmployeeServerController : IEmployeeServerController
     {

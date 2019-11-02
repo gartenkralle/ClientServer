@@ -1,4 +1,4 @@
-﻿namespace TcpServer
+﻿namespace ServerDispatchment
 {
     internal class Request
     {

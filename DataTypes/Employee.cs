@@ -1,6 +1,6 @@
-﻿using Dispatchment;
+﻿using SharedAbstractModel;
 
-namespace DataTypes
+namespace SharedModel
 {
     public class Employee : IDataEntity
     {

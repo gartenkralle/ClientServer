@@ -1,7 +1,6 @@
-﻿using Dispatchment;
-using TcpIp_Extended;
+﻿using SharedAbstractModel;
 
-namespace Client
+namespace NetworkClientController
 {
     public class EmployeeClientController
     {

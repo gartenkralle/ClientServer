@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Server\NetworkServerController\NetworkServerController.csproj" />
+    <ProjectReference Include="..\Server\NetworkServerController\ServerController.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace TcpIp_Extended
+﻿namespace ServerController
 {
     public interface INetworkServer
     {

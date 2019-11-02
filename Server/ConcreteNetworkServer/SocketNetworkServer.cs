@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
-using TcpIp_Extended;
+using ServerController;
 
-namespace TcpIp_Server
+namespace ConcreteNetworkServer
 {
     public class SocketNetworkServer : INetworkServer, IDisposable
     {

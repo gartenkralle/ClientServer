@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dispatchment
+namespace SharedAbstractModel
 {
     public interface IDataEntity : IEquatable<IDataEntity>
     {

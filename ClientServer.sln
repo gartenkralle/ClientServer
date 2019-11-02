@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkClientController", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcreteNetworkServer", "Server\ConcreteNetworkServer\ConcreteNetworkServer.csproj", "{4E2A4BE9-0355-4D1D-8A40-96D6BA81E78C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkServerController", "Server\NetworkServerController\NetworkServerController.csproj", "{3EB09E9F-E554-45A2-9160-AA187F192C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerController", "Server\NetworkServerController\ServerController.csproj", "{3EB09E9F-E554-45A2-9160-AA187F192C5C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerConsoleApp", "Server\ServerConsoleApp\ServerConsoleApp.csproj", "{B78E55B9-5C96-4838-BFB2-6C60A3914304}"
 EndProject
@@ -32,9 +32,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C08375
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerModel", "ServerModel\ServerModel.csproj", "{6F8F7945-8C15-42BC-B352-D304E8E44C30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dispatchment", "Dispatcher\Dispatchment.csproj", "{9251D51F-8342-4ECC-8F84-576ABAA8BA60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerDispatchment", "Dispatcher\ServerDispatchment.csproj", "{9251D51F-8342-4ECC-8F84-576ABAA8BA60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerFactory", "ServerFactory\ServerFactory.csproj", "{5E6017E0-BE6A-40FA-93C8-D523C8054287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerFactory", "ServerFactory\ServerFactory.csproj", "{5E6017E0-BE6A-40FA-93C8-D523C8054287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

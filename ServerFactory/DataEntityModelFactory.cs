@@ -1,8 +1,9 @@
-﻿using ServerModel;
+﻿using ServerController;
+using ServerModel;
 
-namespace Server
+namespace ServerFactory
 {
-    internal class DataEntityModelFactory : IDataEntityModelFactory
+    public class DataEntityModelFactory : IDataEntityModelFactory
     {
         public IEmployeeServerModel CreateEmployeeServerModel()
         {

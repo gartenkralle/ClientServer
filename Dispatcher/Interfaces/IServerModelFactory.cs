@@ -1,4 +1,4 @@
-﻿namespace Dispatchment
+﻿namespace ServerDispatchment
 {
     public interface IServerModelFactory
     {

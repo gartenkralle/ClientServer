@@ -1,7 +1,9 @@
-﻿using Dispatchment;
-using TcpIp_Server;
+﻿using ServerDispatchment;
+using ConcreteNetworkServer;
+using ServerFactory;
+using ServerController;
 
-namespace Server
+namespace ServerConsoleApp
 {
     class ServerProgram
     {

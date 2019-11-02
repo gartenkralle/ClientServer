@@ -1,6 +1,7 @@
-﻿using Dispatchment;
+﻿using ServerController;
+using ServerDispatchment;
 
-namespace Server
+namespace ServerFactory
 {
     public class ServerControllerFactory : IServerControllerFactory
     {

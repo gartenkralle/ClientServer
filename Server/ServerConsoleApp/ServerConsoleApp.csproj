@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Dispatcher\Dispatchment.csproj" />
+    <ProjectReference Include="..\..\Dispatcher\ServerDispatchment.csproj" />
     <ProjectReference Include="..\..\ServerFactory\ServerFactory.csproj" />
     <ProjectReference Include="..\ConcreteNetworkServer\ConcreteNetworkServer.csproj" />
   </ItemGroup>

@@ -1,9 +1,8 @@
-﻿using Client;
-using DataTypes;
+﻿using NetworkClientController;
 using System;
-using TcpIp_Extended;
+using SharedModel;
 
-namespace ConsoleApp
+namespace ClientConsoleApp
 {
     class ClientProgram
     {

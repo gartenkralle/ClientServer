@@ -1,6 +1,4 @@
-﻿using TcpIp_Extended;
-
-namespace Server
+﻿namespace ServerController
 {
     public class NetworkServerController
     {

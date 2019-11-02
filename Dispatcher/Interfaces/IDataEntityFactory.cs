@@ -1,4 +1,6 @@
-﻿namespace Dispatchment
+﻿using SharedAbstractModel;
+
+namespace ServerDispatchment
 {
     public interface IDataEntityFactory
     {

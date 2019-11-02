@@ -7,7 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DataTypes\SharedModel.csproj" />
     <ProjectReference Include="..\ServerModel\ServerModel.csproj" />
-    <ProjectReference Include="..\Server\NetworkServerController\NetworkServerController.csproj" />
+    <ProjectReference Include="..\Server\NetworkServerController\ServerController.csproj" />
   </ItemGroup>
 
 </Project>

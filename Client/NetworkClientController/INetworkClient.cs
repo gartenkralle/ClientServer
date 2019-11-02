@@ -1,4 +1,4 @@
-﻿namespace TcpIp_Extended
+﻿namespace NetworkClientController
 {
     public interface INetworkClient
     {

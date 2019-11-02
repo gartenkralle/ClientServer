@@ -1,6 +1,6 @@
-﻿using DataTypes;
+﻿using SharedAbstractModel;
 
-namespace Dispatchment
+namespace ServerController
 {
     public interface IEmployeeServerController
     {

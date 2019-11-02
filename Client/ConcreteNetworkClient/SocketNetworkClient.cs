@@ -2,7 +2,7 @@
 using System.Net.Sockets;
 using System.Text;
 
-namespace TcpIp_Extended
+namespace NetworkClientController
 {
     public class SocketNetworkClient : INetworkClient, IDisposable
     {
