@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DataTypes
 {
-    public class Employee : IEmployee
+    public class Employee : IDataEntity
     {
         public Employee()
         {
@@ -25,11 +25,15 @@ namespace DataTypes
 
         public int Salary { get; set; }
 
-        public bool Equals([AllowNull] IEmployee other)
+        public bool Equals([AllowNull] IDataEntity other)
         {
-            IEmployee employee = other as IEmployee;
+            if (!(other is Employee))
+                return false;
 
-            return ID == employee.ID &&
+            Employee employee = other as Employee;
+
+            return 
+                ID == employee.ID &&
                 Name == employee.Name &&
                 Salary == employee.Salary;
         }

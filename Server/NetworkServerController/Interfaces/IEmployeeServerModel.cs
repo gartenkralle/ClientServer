@@ -4,6 +4,6 @@ namespace Server
 {
     public interface IEmployeeServerModel
     {
-        bool Contains(IEmployee employee);
+        bool Contains(IDataEntity employee);
     }
 }

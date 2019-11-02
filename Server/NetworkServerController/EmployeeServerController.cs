@@ -11,7 +11,7 @@ namespace Server
             this.employeeModel = employeeModel;
         }
 
-        public bool IsExisting(IEmployee employee)
+        public bool IsExisting(IDataEntity employee)
         {
             return employeeModel.Contains(employee);
         }

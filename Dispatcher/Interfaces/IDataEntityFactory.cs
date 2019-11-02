@@ -2,6 +2,6 @@
 {
     public interface IDataEntityFactory
     {
-        IEmployee CreateEmployee(string data);
+        IDataEntity CreateEmployee(string data);
     }
 }

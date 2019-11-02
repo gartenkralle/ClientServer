@@ -7,13 +7,13 @@ namespace ServerModel
 {
     public class EmployeeServerModel : IEmployeeServerModel
     {
-        private readonly ICollection<IEmployee> employees;
+        private readonly ICollection<IDataEntity> employees;
 
         public EmployeeServerModel()
         {
-            employees = new List<IEmployee>();
+            employees = new List<IDataEntity>();
 
-            IEmployee employee = new Employee
+            IDataEntity employee = new Employee
             {
                 ID = 2,
                 Name = "Peter",
@@ -23,7 +23,7 @@ namespace ServerModel
             employees.Add(employee);
         }
 
-        public bool Contains(IEmployee employee)
+        public bool Contains(IDataEntity employee)
         {
             return employees.Contains(employee);
         }

@@ -12,7 +12,7 @@ namespace Client
             this.networkClient = networkClient;
         }
 
-        public bool IsExisting(IEmployee employee)
+        public bool IsExisting(IDataEntity employee)
         {
             networkClient.Send("Employee", "IsExisting", employee.ToString());
 
