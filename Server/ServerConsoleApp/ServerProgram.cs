@@ -1,4 +1,5 @@
 ﻿using Dispatchment;
+using ServerModel;
 using TcpIp_Server;
 
 namespace Server
@@ -8,7 +9,8 @@ namespace Server
         static void Main()
         {
             NetworkServerController networkServerController = new NetworkServerController(new SocketNetworkServer());
-            Dispatcher dispatcher = new Dispatcher(new ServerControllerFactory(), new DataEntityFactory());
+            Dispatcher dispatcher = new Dispatcher(new ServerControllerFactory(new EmployeeServerModel()), new DataEntityFactory());
+
             while (true)
             {
                 string request = networkServerController.Receive();

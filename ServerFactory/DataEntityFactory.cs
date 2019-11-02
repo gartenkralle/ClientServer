@@ -3,7 +3,7 @@ using Dispatchment;
 
 namespace Server
 {
-    internal class DataEntityFactory : IDataEntityFactory
+    public class DataEntityFactory : IDataEntityFactory
     {
         public IDataEntity CreateEmployee(string data)
         {

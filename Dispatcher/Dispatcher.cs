@@ -2,6 +2,16 @@
 
 namespace Dispatchment
 {
+    internal static class Type
+    {
+        internal const string Employee = "Employee";
+    }
+
+    internal static class Function
+    {
+        internal const string IsExisting = "IsExisting";
+    }
+
     public class Dispatcher
     {
         private readonly IServerControllerFactory serverControllerFactory;
@@ -19,11 +29,11 @@ namespace Dispatchment
 
             Request requestEntity = new Request(request);
 
-            if (requestEntity.Type == "Employee")
+            if (requestEntity.Type == Type.Employee)
             {
                 IEmployeeServerController employeeServerController = serverControllerFactory.CreateEmployeeServerController();
 
-                if (requestEntity.Function == "IsExisting")
+                if (requestEntity.Function == Function.IsExisting)
                 {
                     response = employeeServerController.IsExisting(dataEntityFactory.CreateEmployee(requestEntity.Data)).ToString();
                 }
