@@ -9,7 +9,7 @@ namespace Server
         static void Main()
         {
             NetworkServerController networkServerController = new NetworkServerController(new SocketNetworkServer());
-            Dispatcher dispatcher = new Dispatcher(new ServerControllerFactory(new EmployeeServerModel()), new DataEntityFactory());
+            Dispatcher dispatcher = new Dispatcher(new ServerControllerFactory(new DataEntityModelFactory()), new DataEntityFactory());
 
             while (true)
             {

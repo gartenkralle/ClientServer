@@ -1,20 +1,19 @@
 ﻿using Dispatchment;
-using ServerModel;
 
 namespace Server
 {
     public class ServerControllerFactory : IServerControllerFactory
     {
-        private readonly IEmployeeServerModel employeeServerModel;
+        private readonly IDataEntityModelFactory dataEntityModelFactory;
 
-        public ServerControllerFactory(IEmployeeServerModel employeeServerModel)
+        public ServerControllerFactory(IDataEntityModelFactory dataEntityModelFactory)
         {
-            this.employeeServerModel = employeeServerModel;
+            this.dataEntityModelFactory = dataEntityModelFactory;
         }
 
         public IEmployeeServerController CreateEmployeeServerController()
         {
-            return new EmployeeServerController(employeeServerModel);
+            return new EmployeeServerController(dataEntityModelFactory.CreateEmployeeServerModel());
         }
     }
 }

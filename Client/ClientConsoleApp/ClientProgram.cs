@@ -11,19 +11,22 @@ namespace ConsoleApp
         {
             EmployeeClientController employeeClientController = new EmployeeClientController(new SocketNetworkClient());
 
-            Console.WriteLine(employeeClientController.IsExisting(new Employee
+            Employee employee1 = new Employee
             {
                 ID = 1,
                 Name = "Peter",
                 Salary = 30000
-            }));
+            };
 
-            Console.WriteLine(employeeClientController.IsExisting(new Employee
+            Employee employee2 = new Employee
             {
                 ID = 2,
                 Name = "Peter",
                 Salary = 30000
-            }));
+            };
+
+            Console.WriteLine(employeeClientController.IsExisting(employee1));
+            Console.WriteLine(employeeClientController.IsExisting(employee2));
         }
     }
 }
