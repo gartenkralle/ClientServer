@@ -1,5 +1,4 @@
 ﻿using Dispatchment;
-using System.Diagnostics.CodeAnalysis;
 
 namespace DataTypes
 {
