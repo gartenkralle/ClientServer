@@ -24,7 +24,7 @@ namespace DataTypes
 
         public int Salary { get; set; }
 
-        public bool Equals([AllowNull] IDataEntity other)
+        public bool Equals(IDataEntity other)
         {
             if (!(other is Employee))
                 return false;
