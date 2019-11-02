@@ -1,8 +1,9 @@
-﻿using System;
+﻿using NetworkClientController;
+using System;
 using System.Net.Sockets;
 using System.Text;
 
-namespace NetworkClientController
+namespace ConcreteClientController
 {
     public class SocketNetworkClient : INetworkClient, IDisposable
     {

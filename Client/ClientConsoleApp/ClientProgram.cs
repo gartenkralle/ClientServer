@@ -1,6 +1,7 @@
 ﻿using NetworkClientController;
 using System;
 using SharedModel;
+using ConcreteClientController;
 
 namespace ClientConsoleApp
 {
