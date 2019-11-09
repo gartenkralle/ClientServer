@@ -29,8 +29,6 @@ namespace Server.Network
 
         public string Receive()
         {
-            Connect();
-
             data = null;
 
             int bytesRead;
@@ -49,8 +47,24 @@ namespace Server.Network
 
             networkStream.Write(msg, 0, msg.Length);
             Console.WriteLine("Sent: {0}", data);
+        }
 
-            Disconnect();
+        public void Connect()
+        {
+            Console.WriteLine("Waiting for a connection... ");
+
+            tcpClient = tcpListener.AcceptTcpClient();
+
+            Console.WriteLine("Connected!");
+
+            networkStream = tcpClient.GetStream();
+        }
+
+        public void Disconnect()
+        {
+            tcpClient.Close();
+            networkStream.Dispose();
+            Console.WriteLine("Disconnected!");
         }
 
         public void Dispose()
@@ -67,24 +81,6 @@ namespace Server.Network
                 tcpListener.Stop();
                 networkStream.Dispose();
             }
-        }
-
-        private void Connect()
-        {
-            Console.WriteLine("Waiting for a connection... ");
-
-            tcpClient = tcpListener.AcceptTcpClient();
-
-            Console.WriteLine("Connected!");
-
-            networkStream = tcpClient.GetStream();
-        }
-
-        private void Disconnect()
-        {
-            tcpClient.Close();
-            networkStream.Dispose();
-            Console.WriteLine("Disconnected!");
         }
     }
 }

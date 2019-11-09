@@ -15,8 +15,6 @@ namespace Client.Network
 
         public void Send(string type, string function, string data)
         {
-            Connect();
-
             byte[] message = Encoding.ASCII.GetBytes($"{type};{function};{data}");
 
             networkStream.Write(message, 0, message.Length);
@@ -28,19 +26,20 @@ namespace Client.Network
 
             int bytesRead = networkStream.Read(data, 0, data.Length);
 
-            Disconnect();
-
             return Encoding.ASCII.GetString(data, 0, bytesRead);
         }
 
-        private void Connect()
+        public void Connect()
         {
             tcpClient = new TcpClient(serverIp, port);
             networkStream = tcpClient.GetStream();
         }
 
-        private void Disconnect()
+        public void Disconnect()
         {
+            byte[] message = Encoding.ASCII.GetBytes("Disconnect");
+            networkStream.Write(message, 0, message.Length);
+
             networkStream.Close();
             tcpClient.Close();
         }

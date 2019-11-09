@@ -9,7 +9,8 @@ namespace Client.ConsoleApp
     {
         static void Main()
         {
-            EmployeeController employeeController = new EmployeeController(new SocketNetwork());
+            INetwork network = new SocketNetwork();
+            EmployeeController employeeController = new EmployeeController(network);
 
             Employee employee1 = new Employee
             {
@@ -25,8 +26,12 @@ namespace Client.ConsoleApp
                 Salary = 30000
             };
 
+            network.Connect();
+
             Console.WriteLine(employeeController.IsExisting(employee1));
             Console.WriteLine(employeeController.IsExisting(employee2));
+
+            network.Disconnect();
         }
     }
 }
