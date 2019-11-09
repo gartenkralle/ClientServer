@@ -1,14 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\SharedModel\SharedModel.csproj" />
-    <ProjectReference Include="..\ClientController\ClientController.csproj" />
-    <ProjectReference Include="..\ClientNetwork\ClientNetwork.csproj" />
+    <ProjectReference Include="..\ServerModel\ServerModel.csproj" />
   </ItemGroup>
 
 </Project>
