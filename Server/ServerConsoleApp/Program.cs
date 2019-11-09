@@ -2,6 +2,7 @@
 using Server.Dispatchment;
 using Server.Factory;
 using Server.Network;
+using System;
 
 namespace Server.ConsoleApp
 {
@@ -19,15 +20,19 @@ namespace Server.ConsoleApp
             {
                 if(!connected)
                 {
+                    Console.WriteLine("Waiting for a connection... ");
                     network.Connect();
+                    Console.WriteLine("Connected!");
                     connected = true;
                 }
 
                 string request = networkController.Receive();
+                Console.WriteLine("Received: {0}", request);
 
                 if (request == "Disconnect")
                 {
                     network.Disconnect();
+                    Console.WriteLine("Disconnected!");
                     connected = false;
                     continue;
                 }
@@ -35,6 +40,7 @@ namespace Server.ConsoleApp
                 string response = dispatcher.Dispatch(request);
 
                 networkController.Send(response);
+                Console.WriteLine("Sent: {0}", response);
             }
         }
     }

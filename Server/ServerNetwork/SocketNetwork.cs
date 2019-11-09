@@ -11,8 +11,6 @@ namespace Server.Network
         private readonly string serverIp = "127.0.0.1";
 
         private readonly byte[] bytes;
-        private string data;
-
         private readonly TcpListener tcpListener;
         private TcpClient tcpClient;
         private NetworkStream networkStream;
@@ -29,34 +27,20 @@ namespace Server.Network
 
         public string Receive()
         {
-            data = null;
+            int bytesRead = networkStream.Read(bytes, 0, bytes.Length);
 
-            int bytesRead;
-
-            bytesRead = networkStream.Read(bytes, 0, bytes.Length);
-
-            data = System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRead);
-            Console.WriteLine("Received: {0}", data);
-
-            return data;
+            return System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRead);
         }
 
         public void Send(string data)
         {
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
-
             networkStream.Write(msg, 0, msg.Length);
-            Console.WriteLine("Sent: {0}", data);
         }
 
         public void Connect()
         {
-            Console.WriteLine("Waiting for a connection... ");
-
             tcpClient = tcpListener.AcceptTcpClient();
-
-            Console.WriteLine("Connected!");
-
             networkStream = tcpClient.GetStream();
         }
 
@@ -64,7 +48,6 @@ namespace Server.Network
         {
             tcpClient.Close();
             networkStream.Dispose();
-            Console.WriteLine("Disconnected!");
         }
 
         public void Dispose()
