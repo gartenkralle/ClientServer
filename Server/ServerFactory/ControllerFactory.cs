@@ -7,9 +7,9 @@ namespace Server.Factory
     {
         private readonly ICollectionFactory collectionFactory;
 
-        public ControllerFactory(ICollectionFactory dataEntityModelFactory)
+        public ControllerFactory(ICollectionFactory collectionFactory)
         {
-            this.collectionFactory = dataEntityModelFactory;
+            this.collectionFactory = collectionFactory;
         }
 
         public IEmployeeController CreateEmployeeController()
