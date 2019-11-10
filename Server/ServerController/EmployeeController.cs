@@ -1,13 +1,14 @@
-﻿using Shared.Model;
+﻿using Server.Model;
+using Shared.Model;
 using System.Collections.Generic;
 
 namespace Server.Controller
 {
     public class EmployeeController : IEmployeeController
     {
-        private readonly ICollection<IEmployee> employeeModel;
+        private readonly EmployeeCollection employeeModel;
 
-        public EmployeeController(ICollection<IEmployee> employeeModel)
+        public EmployeeController(EmployeeCollection employeeModel)
         {
             this.employeeModel = employeeModel;
         }

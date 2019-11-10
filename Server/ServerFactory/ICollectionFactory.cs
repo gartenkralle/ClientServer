@@ -1,10 +1,9 @@
-﻿using Shared.Model;
-using System.Collections.Generic;
+﻿using Server.Model;
 
 namespace Server.Factory
 {
     public interface ICollectionFactory
     {
-        ICollection<IEmployee> CreateEmployeeCollection();
+        EmployeeCollection CreateEmployeeCollection();
     }
 }
