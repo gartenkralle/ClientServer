@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\SharedModel\SharedModel.csproj" />
+    <ProjectReference Include="..\ServerController\ServerController.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
-﻿using Server.Model;
+﻿using Server.Controller;
 
 namespace Server.Factory
 {
     public interface ICollectionFactory
     {
-        EmployeeCollection CreateEmployeeCollection();
+        IEmployeeCollection CreateEmployeeCollection();
     }
 }

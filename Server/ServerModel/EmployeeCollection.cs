@@ -1,9 +1,10 @@
-﻿using Shared.Model;
+﻿using Server.Controller;
+using Shared.Model;
 using System.Collections.Generic;
 
 namespace Server.Model
 {
-    public class EmployeeCollection
+    public class EmployeeCollection : IEmployeeCollection
     {
         private readonly ICollection<IEmployee> employees;
 
