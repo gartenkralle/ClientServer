@@ -1,4 +1,5 @@
 ﻿using Server.Dispatchment;
+using Shared.AbstractModel;
 using Shared.Model;
 
 namespace Server.Factory

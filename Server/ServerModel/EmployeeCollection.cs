@@ -1,4 +1,5 @@
 ﻿using Server.Controller;
+using Shared.AbstractModel;
 using Shared.Model;
 using System.Collections.Generic;
 

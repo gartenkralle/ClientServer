@@ -1,4 +1,4 @@
-﻿using Shared.Model;
+﻿using Shared.AbstractModel;
 
 namespace Server.Controller
 {

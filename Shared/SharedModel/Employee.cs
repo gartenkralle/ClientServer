@@ -1,4 +1,6 @@
-﻿namespace Shared.Model
+﻿using Shared.AbstractModel;
+
+namespace Shared.Model
 {
     public class Employee : IEmployee
     {
