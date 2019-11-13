@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServerController\Server.Controller.csproj" />
+    <ProjectReference Include="..\ServerDispatchment\Server.Dispatchment.csproj" />
+    <ProjectReference Include="..\ServerModel\Server.Model.csproj" />
+  </ItemGroup>
+
+</Project>

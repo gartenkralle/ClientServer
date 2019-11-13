@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SharedAbstractModel\SharedAbstractModel.csproj" />
+    <ProjectReference Include="..\ServerController\Server.Controller.csproj" />
   </ItemGroup>
 
 </Project>

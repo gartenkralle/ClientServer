@@ -7,31 +7,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{77D538
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{CC8782AF-6326-440B-B7EF-4508A3DCC799}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerConsoleApp", "Server\ServerConsoleApp\ServerConsoleApp.csproj", "{B78E55B9-5C96-4838-BFB2-6C60A3914304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.ConsoleApp", "Server\ServerConsoleApp\Server.ConsoleApp.csproj", "{B78E55B9-5C96-4838-BFB2-6C60A3914304}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientConsoleApp", "Client\ClientConsoleApp\ClientConsoleApp.csproj", "{4D2B268E-C519-41F3-9EFE-6FF373A29327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.ConsoleApp", "Client\ClientConsoleApp\Client.ConsoleApp.csproj", "{4D2B268E-C519-41F3-9EFE-6FF373A29327}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{07BA1101-87A9-4217-AC7B-227B7059A491}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C083756D-73F3-4A06-BCF5-1DECC063698F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedModel", "Shared\SharedModel\SharedModel.csproj", "{35A666A0-72C3-4348-A8D1-A09AD0E85A94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Model", "Shared\SharedModel\Shared.Model.csproj", "{35A666A0-72C3-4348-A8D1-A09AD0E85A94}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientNetwork", "Client\ClientNetwork\ClientNetwork.csproj", "{C6479A47-15EF-46D4-990C-41B6BF7D0284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.Network", "Client\ClientNetwork\Client.Network.csproj", "{C6479A47-15EF-46D4-990C-41B6BF7D0284}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientController", "Client\ClientController\ClientController.csproj", "{E36C3E60-39E9-4CA7-8049-FB2A2495B936}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.Controller", "Client\ClientController\Client.Controller.csproj", "{E36C3E60-39E9-4CA7-8049-FB2A2495B936}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerController", "Server\ServerController\ServerController.csproj", "{CF3C3331-F82E-4FFD-B60F-2B7753BA988C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Controller", "Server\ServerController\Server.Controller.csproj", "{CF3C3331-F82E-4FFD-B60F-2B7753BA988C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerFactory", "Server\ServerFactory\ServerFactory.csproj", "{ADAFC439-6127-4D82-A49F-8D396B582F70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Factory", "Server\ServerFactory\Server.Factory.csproj", "{ADAFC439-6127-4D82-A49F-8D396B582F70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerModel", "Server\ServerModel\ServerModel.csproj", "{967B3FC0-E6CD-4A7B-8524-33D600B2F7F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Model", "Server\ServerModel\Server.Model.csproj", "{967B3FC0-E6CD-4A7B-8524-33D600B2F7F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerNetwork", "Server\ServerNetwork\ServerNetwork.csproj", "{F53728AD-80D6-4BAE-9A1E-A5BDD40B450A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Network", "Server\ServerNetwork\Server.Network.csproj", "{F53728AD-80D6-4BAE-9A1E-A5BDD40B450A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerDispatchment", "Server\ServerDispatchment\ServerDispatchment.csproj", "{97B89AD9-6B55-4325-A923-95CACE977177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server.Dispatchment", "Server\ServerDispatchment\Server.Dispatchment.csproj", "{97B89AD9-6B55-4325-A923-95CACE977177}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedAbstractModel", "SharedAbstractModel\SharedAbstractModel.csproj", "{BE7D9188-C895-4C75-AF2E-F8184C156A15}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.AbstractModel", "SharedAbstractModel\Shared.AbstractModel.csproj", "{BE7D9188-C895-4C75-AF2E-F8184C156A15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

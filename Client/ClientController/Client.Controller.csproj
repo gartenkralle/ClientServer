@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SharedAbstractModel\SharedAbstractModel.csproj" />
+    <ProjectReference Include="..\..\SharedAbstractModel\Shared.AbstractModel.csproj" />
   </ItemGroup>
 
 </Project>
