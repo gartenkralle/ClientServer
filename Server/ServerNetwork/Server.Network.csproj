@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ServerController\Server.Controller.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ServerController\Server.Controller.csproj" />
+	</ItemGroup>
 
 </Project>

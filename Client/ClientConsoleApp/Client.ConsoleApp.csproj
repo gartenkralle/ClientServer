@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Shared\SharedModel\Shared.Model.csproj" />
-    <ProjectReference Include="..\ClientController\Client.Controller.csproj" />
-    <ProjectReference Include="..\ClientNetwork\Client.Network.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Shared\SharedModel\Shared.Model.csproj" />
+		<ProjectReference Include="..\ClientController\Client.Controller.csproj" />
+		<ProjectReference Include="..\ClientNetwork\Client.Network.csproj" />
+	</ItemGroup>
 
 </Project>

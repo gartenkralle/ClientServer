@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ServerController\Server.Controller.csproj" />
-    <ProjectReference Include="..\ServerDispatchment\Server.Dispatchment.csproj" />
-    <ProjectReference Include="..\ServerFactory\Server.Factory.csproj" />
-    <ProjectReference Include="..\ServerModel\Server.Model.csproj" />
-    <ProjectReference Include="..\ServerNetwork\Server.Network.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ServerController\Server.Controller.csproj" />
+		<ProjectReference Include="..\ServerDispatchment\Server.Dispatchment.csproj" />
+		<ProjectReference Include="..\ServerFactory\Server.Factory.csproj" />
+		<ProjectReference Include="..\ServerModel\Server.Model.csproj" />
+		<ProjectReference Include="..\ServerNetwork\Server.Network.csproj" />
+	</ItemGroup>
 
 </Project>
